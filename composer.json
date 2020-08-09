@@ -3,6 +3,7 @@
   "description": "Julia and I are getting married.  This is the WordPress installation.",
   "minimum-stability": "stable",
   "license": "AGPL-3.0-or-later",
+  "type": "project",
   "authors": [
     {
       "name": "James K",
@@ -10,23 +11,29 @@
     }
   ],
   "require": {
-    "johnpbloch/wordpress": ">=5.4"
+    "php": ">=7.4",
+    "johnpbloch/wordpress": ">=5.4",
+    "wpackagist-theme/catch-wedding":"^2.1"
+
   },
   "extra": {
     "installer-paths": {
-      "wp-content/plugins/{$name}/": [
+      "wp/wp-content/plugins/{$name}/": [
         "type:wordpress-plugin"
       ],
-      "wp-content/themes/{$name}/": [
+      "wp/wp-content/themes/{$name}/": [
         "type:wordpress-theme"
       ]
     },
-    "wordpress-install-dir": "wordpress"
+    "wordpress-install-dir": "wp"
   },
   "repositories": [
     {
       "type": "composer",
       "url": "https://wpackagist.org"
     }
-  ]
+  ],
+  "config": {
+    "vendor-dir": "wp/wp-content/vendor"
+  }
 }
