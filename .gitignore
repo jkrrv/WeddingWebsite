@@ -4,3 +4,4 @@
 /vendor/
 composer.lock
 .idea
+!/wp/wp-content/themes/kurtz-wedding
